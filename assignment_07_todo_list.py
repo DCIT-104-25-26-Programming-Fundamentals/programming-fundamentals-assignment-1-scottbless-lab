@@ -79,3 +79,78 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+List_of_task = []
+
+def add_the_task():
+    Number_of_task = int(input("Enter the number of tasks: "))
+
+    for i in range(Number_of_task):
+        task = input("Enter your task description: ")
+        List_of_task.append(task)
+        print("Task added:", task)
+
+
+def view_the_task():
+    if len(List_of_task) == 0:
+        print("No Task available")
+    else:
+        print("Your Tasks:")
+        a = 0
+        for i in List_of_task:
+            a += 1
+            print(a, ".", i)
+
+
+def delete_the_task():
+    if len(List_of_task) == 0:
+        print("No Task available")
+    else:
+        print("Your Tasks:")
+        a = 0
+        for i in List_of_task:
+            a += 1
+            print(a, ".", i)
+
+        Task_to_remove = int(input("Enter the task you want to delete: "))
+
+        if 1 <= Task_to_remove <= len(List_of_task):
+            Remove_task = List_of_task.pop(Task_to_remove - 1)
+            print(Remove_task, "has been deleted successfully.")
+
+            print("Updated Task List:")
+            if len(List_of_task) == 0:
+                print("No Task available")
+            else:
+                a = 0
+                for i in List_of_task:
+                    a += 1
+                    print(a, ".", i)
+        else:
+            print("Invalid task number, try again.")
+
+
+while True:
+    print("\n===== TO-DO LIST MENU =====")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Delete Task")
+    print("4. Exit")
+
+    Choose_from_the_menu = input("Enter a number: ")
+
+    if Choose_from_the_menu == "1":
+        add_the_task()
+
+    elif Choose_from_the_menu == "2":
+        view_the_task()
+
+    elif Choose_from_the_menu == "3":
+        delete_the_task()
+
+    elif Choose_from_the_menu == "4":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Invalid choice. Please select a number between 1 and 4.")

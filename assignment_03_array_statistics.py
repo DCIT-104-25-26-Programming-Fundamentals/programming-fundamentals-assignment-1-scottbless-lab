@@ -39,3 +39,38 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+def array_statistics_calculator():
+    Numbers = []
+    Total = 0
+    count = int((input("How many numbers do you want to enter:")))
+    for i in range(count) :
+        num1 = int(input("Enter the number:"))
+        
+        if num1 <=0:
+            print("ERROR")
+        else:
+         Numbers.append(num1)
+    
+    for i in Numbers:
+            Total += i
+    print("Sum:",Total)
+    
+    if len(Numbers) >  0  :  
+        Average = Total / len(Numbers)
+        print("Average:",Average)
+    
+        Maximum = Numbers[0]        
+        for i in Numbers:
+                if i > Maximum:
+                    Maximum = i
+        print("Maximum:",Maximum)
+        Minimum = Numbers[0]            
+    
+        for i in Numbers:
+                if i < Minimum:
+                    Minimum = i
+        print("Minimum:",Minimum)
+
+array_statistics_calculator()
+                        

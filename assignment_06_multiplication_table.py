@@ -55,3 +55,19 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def multiple_table():
+    number = int(input("Enter a number:"))
+    for i in range(1,13):
+        print(number, "x" ,i, "=" ,number * i)
+multiple_table()
+
+def multiplication_table():
+    num1 = 1
+    number = int(input("Enter a number:"))
+        
+    while num1 <= number :
+        print("Multiples of",num1)
+        for i in range(1,13):
+            print(num1, "x", i,"=", num1*i)
+        num1 += 1
+multiplication_table() 

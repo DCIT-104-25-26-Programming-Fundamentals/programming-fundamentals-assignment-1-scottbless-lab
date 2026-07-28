@@ -67,4 +67,70 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+while True:
+    number1 = int(input("Enter a number:"))
+    print("\n======CALCULATION OPERATORS=========")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Division")
+    print("4. Multiplication")
+    print("5. Modulus")
+    print("6. Exponential")
+    print("7. Quit")
+    choose_an_operator = input("Enter the operator number:")
+    number2 = int(input("Enter a number:"))
 
+
+
+
+    def addition():
+    
+        result = number1 + number2
+        print(result)
+    
+    def subtraction():
+
+        result = number1 - number2
+        print(result)
+    
+    def division():
+   
+        if number2 == 0:
+            print("Cannot be divided by Zero")
+        else:    
+            result = number1 / number2
+            print(result)
+    
+    def Multiplication():
+    
+        result = number1 * number2
+        print(result)
+    
+    def Modulus():
+    
+        result = number1 % number2
+        print(result)
+     
+    def Exponential():
+    
+        result = number1 ** number2
+        print(result)
+
+ 
+    if choose_an_operator == "1":
+        addition()
+    elif choose_an_operator == "2":
+        subtraction()
+    elif choose_an_operator == "3":
+        division()
+    elif choose_an_operator == "4":
+        Multiplication()
+    elif choose_an_operator == "5":
+        Modulus()
+    elif choose_an_operator == "6":
+        Exponential()
+    elif choose_an_operator == "7" :
+        print("Quit")
+        break
+    else:
+        print("You enter invalid choice")

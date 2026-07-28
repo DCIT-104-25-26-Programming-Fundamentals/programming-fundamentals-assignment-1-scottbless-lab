@@ -44,4 +44,18 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
-
+def grading_system():
+    score = int(input("Enter your score:"))
+    if score > 100 or score < 0 :
+        print("Score must be between 0 and 100")
+    elif score >= 80 :
+        print("Grade: A")
+    elif score >= 70 :
+        print("Grade: B")
+    elif score >= 60:
+        print("Grade: C")
+    elif score >= 50:
+        print("Grade: D")
+    else:
+        print("Grade: F")
+grading_system()
